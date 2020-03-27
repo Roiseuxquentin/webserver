@@ -15,6 +15,10 @@
     ```
     npm install 
     ```
+- ###### 2 - config
+
+*Change variable value "const ip = XXX.XXX.XXX.XXX" in ./public/js.js and put your's*
+
 - #### Start server
     ``` 
     node server.js 
@@ -22,3 +26,5 @@
 
 - ### Go to :
 http://localhost:42333/
+
+                                                                             *eegloo*
