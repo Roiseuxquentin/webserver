@@ -1,19 +1,24 @@
-# webserverNode
+# webserver NodeJs 
+- Log request ip to json file
+- Display logs
+
 ![alt text](https://github.com/Roiseuxquentin/webserverNode/blob/master/readmeIMG.png)
-- Basique http server
-- Log ip from request to json file 
-- display request list with html
 
  ## START
-- #### Install npm module 
+ #### http server + client :
+- #### project revover 
+    ```
+    git clone [URL_PROJECT] server
+    cd server
+    ```
+- #### Install node module 
     ```
     npm install 
     ```
 - #### Start server
     ``` 
-    nodemon server.js 
+    node server.js 
     ```
-*(install nodemon to global usage > sudo npm install nodemon)*
 
-#### Go to :
+- ### Go to :
 http://localhost:42333/
