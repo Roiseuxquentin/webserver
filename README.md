@@ -15,7 +15,7 @@
     ```
     npm install 
     ```
-- ###### 2 - config
+- #### config
 
 *Change variable value "const ip = XXX.XXX.XXX.XXX" in ./public/js.js and put your's*
 
