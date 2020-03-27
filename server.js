@@ -35,7 +35,7 @@ app.get('/', (req,res) => {
 //  READ & WRITE DATA TO JSON 
 app.get('/ping', (req,res) => {
   
-  console.log("ASK ?")  
+  console.log("ASK ?")
   const date = new Date()
   
   // IP PROVENANCE
@@ -51,16 +51,18 @@ app.get('/ping', (req,res) => {
       const newJsonData = { localData : bufferJson } // reconstruction json
 
       // ecriture data
-      fs.writeFile('./json.json', JSON.stringify(newJsonData) , (err, jsonDataUp) => {
-        if (err) res.send("NOK") // CONTROLE
+      fs.writeFile('./json.json', JSON.stringify(newJsonData) , 
+        (err, jsonDataUp) => {
+          if (err) res.send("NOK") // CONTROLE
 
-        res.send(JSON.stringify(newJsonData)) // RENVOIE LE JSON
-      })
+          console.log("OK")
+          console.log(" ")
+          res.send(JSON.stringify(newJsonData)) // RENVOIE LE JSON
+        })
     }) 
 })
 
 app.listen(port, () =>  { 
-  
   curl.get('http://roiseux.fr', // Recup publique ip
     (err, response, body) => { 
       if (err) throw err // CONTROLE
@@ -68,6 +70,7 @@ app.listen(port, () =>  {
       console.log("Serveur Listening...") // INFORMATION 
       console.log(`Access via : http://localhost:${port}/`) // INFORMATION 
       console.log(`ip public :${body}\nport : ${port}`) // INFORMATION
+
     }
   )
 })
