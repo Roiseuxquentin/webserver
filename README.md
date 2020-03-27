@@ -6,7 +6,7 @@
 
  ## START
  #### http server + client :
-- #### project revover 
+- #### project recover 
     ```
     git clone [URL_PROJECT] server
     cd server
